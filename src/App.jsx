@@ -12,6 +12,8 @@ function App() {
       style={{
         display: "flex",
         minHeight: "100vh",
+        width: "100%",
+        overflowX: "hidden",
         background:
           "linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%)",
         color: "white",
@@ -28,7 +30,10 @@ function App() {
       {selectedDS ? (
         <Visualizer selectedDS={selectedDS} />
       ) : (
-        <Home setSelectedCategory={setSelectedCategory} />
+        <Home
+          setSelectedCategory={setSelectedCategory}
+          setSelectedDS={setSelectedDS}
+        />
       )}
     </div>
   );

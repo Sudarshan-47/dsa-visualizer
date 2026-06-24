@@ -140,18 +140,29 @@ const handleKeyDown = (e) => {
   };
 
   return (
-    <div style={{ padding: "30px", color: "white" }}>
-      <h1
-        style={{
-          fontSize: "48px",
-          marginBottom: "25px",
-          background: "linear-gradient(90deg,#38bdf8,#818cf8)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent"
-        }}
-      >
-        📦 Array Visualizer
-      </h1>
+<div
+  style={{
+    padding: "30px",
+    color: "white",
+    width: "100%",
+    minWidth: 0,
+    overflowX: "auto",
+  }}
+>      <h1
+  style={{
+    fontSize: "clamp(32px, 4vw, 48px)",
+    marginBottom: "25px",
+    width: "100%",
+    textAlign: "center",
+    whiteSpace: "normal",
+    overflow: "visible",
+    background: "linear-gradient(90deg,#38bdf8,#818cf8)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
+  📦 Array Visualizer
+</h1>
 
       {!isCreated && (
         <div

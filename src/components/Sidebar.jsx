@@ -34,17 +34,23 @@ function Sidebar({
   return (
     <div
       style={{
-        width: "280px",
+        width: "260px",
+        minWidth: "260px",
+        flexShrink: 0,
         padding: "24px",
         background: "rgba(17,24,39,0.6)",
         backdropFilter: "blur(20px)",
         borderRight: "1px solid rgba(255,255,255,0.1)",
+        minHeight: "100vh",
+        boxSizing: "border-box",
       }}
     >
       <h1
         style={{
-          fontSize: "32px",
+          fontSize: "clamp(24px, 2vw, 32px)",
           fontWeight: "bold",
+          textAlign: "center",
+          marginBottom: "20px",
           background: "linear-gradient(90deg,#38bdf8,#818cf8)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",

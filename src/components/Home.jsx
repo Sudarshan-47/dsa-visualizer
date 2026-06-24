@@ -17,27 +17,39 @@ function Home({ setSelectedCategory, setSelectedDS }) {
     <div
       style={{
         flex: 1,
+        width: "100%",
+        minWidth: 0,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         padding: "40px",
+        position: "relative",
+        minHeight: "100vh",
+        overflow: "hidden",
       }}
     >
-      <h1 style={{ fontSize: "72px", marginBottom: "20px" }}>
+      <h1
+        style={{
+          fontSize: "clamp(36px, 5vw, 72px)",
+          marginBottom: "20px",
+          textAlign: "center",
+          lineHeight: 1.2,
+        }}
+      >
         Master DSA Visually
       </h1>
 
       <p
         style={{
-          fontSize: "22px",
+          fontSize: "clamp(16px, 2vw, 22px)",
           maxWidth: "950px",
           textAlign: "center",
           color: "#cbd5e1",
+          padding: "0 20px",
         }}
       >
-        Data Structures and Algorithms help organize data efficiently and solve
-        problems faster. Learn each structure with animations and step-by-step
+        Learn each structure with animations and step-by-step
         visualizations.
       </p>
 
@@ -78,6 +90,25 @@ function Home({ setSelectedCategory, setSelectedDS }) {
           </p>
         </motion.div>
       </div>
+
+      <p
+        style={{
+          position: "absolute",
+          bottom: "20px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          fontSize: "16px",
+          color: "#94a3b8",
+          textAlign: "center",
+          whiteSpace: "nowrap",
+        }}
+      >
+        Designed & Developed by{" "}
+        <span style={{ color: "#38bdf8", fontWeight: "bold" }}>
+          Sudarshan Pesingi
+        </span>{" "}
+        🚀
+      </p>
     </div>
   );
 }
